@@ -190,4 +190,26 @@ $(document).ready(function(){
         }
     });
 
+    $('#portfolioMenuBlock').click(function(){
+        $('#loadingAjax').removeClass('d-none');
+        $.ajax({
+            url: "ajax/portfolioBlock.html",
+            success: function(data){
+                $('#loadingAjax').addClass('d-none');
+                $('#viewDataPortfolio').html(data);
+            }
+        }); 
+    })
+
+    $('#portfolioMenuList').click(function(){
+        $('#loadingAjax').removeClass('d-none');
+        $.ajax({
+            url: "ajax/portfolioList.html",
+            success: function(data){
+                $('#loadingAjax').addClass('d-none');
+                $('#viewDataPortfolio').html(data);
+            }
+        }); 
+    })
+
 })
