@@ -210,8 +210,9 @@ a.sd .sd-rotate, a.mts .mts-rotate, a.smk .smk-rotate {
     background: #ced1d1;
 }
 
-.btn-portfolio {
-    
+.btn-portfolio:hover {
+    background: #e2ecec;
+    transition: 500ms ease;
 }
 
 @media(max-width: 768px){
