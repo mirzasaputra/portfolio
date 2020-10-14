@@ -246,3 +246,10 @@ $(document).ready(function(){
     })
 
 })
+
+paceOptions = {
+    ajax: false,
+    document: false,
+    eventLag: false,
+    elements: false
+}

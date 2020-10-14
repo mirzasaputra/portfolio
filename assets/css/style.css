@@ -204,6 +204,7 @@ a.sd .sd-rotate, a.mts .mts-rotate, a.smk .smk-rotate {
     background: #e5ebee;
     border-radius: 5px;
     color: #4e4e4e;
+    cursor: pointer;
 }
 
 .btn-groups i:hover {
@@ -236,6 +237,18 @@ a.sd .sd-rotate, a.mts .mts-rotate, a.smk .smk-rotate {
 .card-image {
     height: 220px!important;
     overflow: hidden;
+}
+
+.nav-bottom p:hover {
+    color: #cf7106;
+    cursor: pointer;
+    padding-left: 10px;
+    transition: 500ms ease;
+}
+
+.collapse-pend:hover {
+    border-bottom: 1px solid #cf7106!important;
+    transition: 500ms ease;
 }
 
 @media(max-width: 768px){
