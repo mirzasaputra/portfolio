@@ -85,13 +85,30 @@ $(document).ready(function(){
             $('.backToTop').hide();
         }
 
-        if($(this).scrollTop() < $('#resumeMe').offset().top -80){
+        if($(this).scrollTop() < $('#resumeMe').offset().top -90){
             $('.home-btn').addClass('active');
             $('.resume-btn').removeClass('active');
-        } else if ($(this).scrollTop() >= $('#resumeMe').offset().top -80){
+            $('.portfolio-btn').removeClass('active');
+            $('.blog-btn').removeClass('active');
+        } 
+        if ($(this).scrollTop() >= $('#resumeMe').offset().top -90 && $(this).scrollTop() < $('#portfolio').offset().top - 90){
             $('.home-btn').removeClass('active');
             $('.resume-btn').addClass('active');
+            $('.portfolio-btn').removeClass('active');
+            $('.blog-btn').removeClass('active');
         }
+        if ($(this).scrollTop() >= $('#portfolio').offset().top -90 && $(this).scrollTop() < $('#blog').offset().top - 90){
+            $('.home-btn').removeClass('active');
+            $('.resume-btn').removeClass('active');
+            $('.portfolio-btn').addClass('active');
+            $('.blog-btn').removeClass('active');
+        }
+        if ($(this).scrollTop() >= $('#blog').offset().top -90){
+            $('.home-btn').removeClass('active');
+            $('.resume-btn').removeClass('active');
+            $('.portfolio-btn').removeClass('active');
+            $('.blog-btn').addClass('active');
+        } 
     })
 
     $('.sd').click(function(){
@@ -146,7 +163,7 @@ $(document).ready(function(){
     $('.home-btn').click(function(e){
         e.preventDefault();
         $("html, body").animate({
-            scrollTop: $('#home').offset().top - 180
+            scrollTop: $('#home').offset().top - 90
         }, 800);
         $('#navbarSupport').attr('class', 'navbar-collapse collapse');
     })
@@ -154,7 +171,23 @@ $(document).ready(function(){
     $('.resume-btn').click(function(e){
         e.preventDefault();
         $("html, body").animate({
-            scrollTop: $('#resumeMe').offset().top - 180
+            scrollTop: $('#resumeMe').offset().top - 90
+        }, 800);
+        $('#navbarSupport').attr('class', 'navbar-collapse collapse');
+    })
+
+    $('.portfolio-btn').click(function(e){
+        e.preventDefault();
+        $("html, body").animate({
+            scrollTop: $('#portfolio').offset().top - 90
+        }, 800);
+        $('#navbarSupport').attr('class', 'navbar-collapse collapse');
+    })
+
+    $('.blog-btn').click(function(e){
+        e.preventDefault();
+        $("html, body").animate({
+            scrollTop: $('#blog').offset().top - 180
         }, 800);
         $('#navbarSupport').attr('class', 'navbar-collapse collapse');
     })

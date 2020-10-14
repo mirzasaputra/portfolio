@@ -219,6 +219,25 @@ a.sd .sd-rotate, a.mts .mts-rotate, a.smk .smk-rotate {
     transition: 500ms ease;
 }
 
+#blog .blog-link {
+    color: rgb(51, 51, 51);
+    text-decoration: none!important;
+}
+
+#blog .blog-link:hover {
+    color: #cf7106!important;
+    transition: 500ms ease;
+}
+
+#blog .blog:hover {
+    border: 1px solid #cf7106;
+}
+
+.card-image {
+    height: 220px!important;
+    overflow: hidden;
+}
+
 @media(max-width: 768px){
     .navbar {
         padding: 10px!important;
